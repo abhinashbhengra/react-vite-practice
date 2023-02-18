@@ -2,8 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "./ButtonStyle";
+import { useGlobalContext } from "../context";
 
 const HeroSection = ({ name, image }) => {
+  const role = useGlobalContext();
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
@@ -11,7 +13,7 @@ const HeroSection = ({ name, image }) => {
           <p className="hero-top-data">Hi 👋, I'm</p>
           <h1 className="hero-heading">{name}</h1>
           <p className="hero-para">
-            I'm a frontend developer who loves to build things for the web.
+            I'm a {role} who loves to build things for the web.
           </p>
           <Button className="btn hireme-btn">
             <NavLink to="contact">Hire Me</NavLink>
