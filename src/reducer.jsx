@@ -15,6 +15,12 @@ const reducer = (state, action) => {
       role: action.payload.role,
     };
   }
+  if (action.type === "GET_SERVICES") {
+    return {
+      ...state,
+      services: action.payload,
+    };
+  }
   return action;
 };
 
