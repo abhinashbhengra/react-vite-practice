@@ -4,7 +4,7 @@ import { reducer } from "../src/reducer";
 const AppContext = createContext(); // create context
 
 const API =
-  "https://e86889d7-f36f-4c07-90a0-2d87576cf6a5.mock.pstmn.io/getServices";
+  "https://95aba5c2-b487-47cd-b1cc-3ef87a59cc9e.mock.pstmn.io/getServices";
 
 const initialState = {
   name: "",
