@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { CgMenu, CgClose } from "react-icons/cg";
 
 const Navbar = () => {
   return (
@@ -28,6 +29,10 @@ const Navbar = () => {
             </NavLink>
           </li>
         </ul>
+        <div className="mobile-navbar-btn">
+          <CgMenu />
+          <CgClose />
+        </div>
       </div>
     </Nav>
   );
@@ -53,6 +58,9 @@ const Nav = styled.nav`
         color: ${({ theme }) => theme.colors.helper};
       }
     }
+  }
+  .mobile-navbar-btn {
+    display: none;
   }
 `;
 
